@@ -28,19 +28,19 @@ def user():
             print(" ************************************************** ")
             print("          !!! Welcome to Registration !!!      ")
             print(" ************************************************** ")
-            firstname = raw_input("First Name :    ")
-            lastname = raw_input("Last Name :    ")
-            emailid = raw_input("Email :    ")
-            phoneno = int(raw_input("Phone Number :    "))
+            firstname = raw_input("First Name :")
+            lastname = raw_input("Last Name :")
+            emailid = raw_input("Email :")
+            phoneno = int(raw_input("Phone Number :"))
             print(" @@@@ Username should be greater than 8 character @@@@ ")
             print("")
-            username = raw_input("  Enter your Username :    ")
+            username = raw_input("  Enter your Username :")
             length = len(username)
             if length < 8:
                 continue
             print("")
             print(" @@@@ Password should greater than 8 character @@@@ ")
-            passwd = raw_input("Enter your Password  :     ")
+            passwd = raw_input("Enter your Password  :")
             plen = len(passwd)
             if plen < 8:
                 continue
