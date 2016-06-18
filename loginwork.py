@@ -7,6 +7,7 @@ import re
 import os
 import string
 import csv
+import getpass #to hide characters for password ,Which will get the password while displaying nothing
 
 def database():
     global data
@@ -49,11 +50,11 @@ def user():
                 continue
             print("")
             print(" @@@@ Password should greater than 8 character @@@@ ")
-            passwd = raw_input("Enter your Password  :")
+            passwd = getpass.getpass("Enter your Password  :")
             plen = len(passwd)
             if plen < 8:
                 continue
-            repasswd = raw_input("Re-Enter your Password :   ")
+            repasswd = getpass.getpass("Re-Enter your Password :   ")
             match = re.search(repasswd,passwd)
             if match:
                 print("         !!! Password Matched !!!      ")
@@ -109,6 +110,11 @@ def user():
                 print "Incorrect username and Password"
                 
                 continue
+    elif choice == 3:
+        print("Good bye !!!! ")
+        exit()
+    elif choice > 3:
+        print("Invalid choice !!!!  Program is terminating ")
 database()
 menu()
 user()
