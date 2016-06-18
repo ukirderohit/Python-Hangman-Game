@@ -75,7 +75,7 @@ def user():
                         writerds = csv.writer(csvfile)
                         writerds.writerow([firstname,lastname,emailid,phoneno,username,passwd])
                         csvfile.close()
-                        menu()# Game should start here
+                        return 'Success'
                         return False
                 else:
                     menu()
@@ -94,7 +94,7 @@ def user():
         print("")
         while True:
             username1 = raw_input("Enter your Username : ")
-            passwd1 = raw_input("Enter your password : ")
+            passwd1 = getpass.getpass("Enter your password : ")
             FileOpen = open("hangman.csv","rb")
             FileRead = csv.reader(FileOpen, delimiter = ',')
             FileRead.next() #skip first line
@@ -104,10 +104,7 @@ def user():
                 text = row[4]
                 text1 = row[5]
                 if (text in username1) and (text1 in passwd1) :
-                    print "Success"
-                    
-                    menu()
-                    user()
+                    return 'Success'
                     return False
                 else:
                     i=0
@@ -121,6 +118,6 @@ def user():
         exit()
     elif choice > 3:
         print("Invalid choice !!!!  Program is terminating ")
-database()
-menu()
-user()
+# database()
+# menu()
+# user()
