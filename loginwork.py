@@ -1,5 +1,11 @@
 '''=============================================================================
-Rohit Shankarrao Ukirde
+# Script Name	: loginwork.py
+# Author			: Rohit Shankarrao Ukirde
+# Created			: 15th June 2016
+# Last Modified	: 18th June 2016
+
+# Description		: This will go through Login, has Command Line Interface 
+Password is hidden from user
 This file authenticates the user data from csv file
 ============================================================================='''
 
