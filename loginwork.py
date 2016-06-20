@@ -17,6 +17,7 @@ import getpass #to hide characters for password ,Which will get the password whi
 
 
 def menu(): 
+    """This is Login Menu"""
     print("")
     print("")
     print("")
@@ -30,9 +31,11 @@ def menu():
 	
 	
 def user():
+    """Registration Menu - This automates according to the user input"""
     global choice 
     choice = int(raw_input("Enter your Choice Please : "))
     if choice == 1:
+        """New Sign-UP here"""
         while True:
             os.system('cls')
             print(" ************************************************** ")
@@ -66,6 +69,7 @@ def user():
                     print("")
                 
                     with open("hangman.csv", "ab") as csvfile:
+                        """CSV file is handled here"""
                         writerds = csv.writer(csvfile)
                         writerds.writerow([firstname,lastname,emailid,phoneno,username,passwd])
                         csvfile.close()
@@ -81,6 +85,7 @@ def user():
                 continue
             print("")
     elif choice == 2:
+        """Login Here"""
         os.system('cls')
         print("")
         print("")
@@ -108,9 +113,11 @@ def user():
                 
                 continue
     elif choice == 3:
+        """Exit"""
         print("Good bye !!!! ")
         exit()
     elif choice > 3:
+        """IF choice entered more than 3 it will exit"""
         print("Invalid choice !!!!  Program is terminating ")
 
 # menu()
