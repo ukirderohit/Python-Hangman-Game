@@ -1,6 +1,5 @@
 import loginwork
 
-loginwork.database()
 loginwork.menu()
 status = loginwork.user()
 if status == 'Success':

@@ -1,4 +1,4 @@
-'''=============================================================================
+"""=============================================================================
 # Script Name	: loginwork.py
 # Author			: Rohit Shankarrao Ukirde
 # Created			: 15th June 2016
@@ -7,7 +7,7 @@
 # Description		: This will go through Login, has Command Line Interface 
 Password is hidden from user
 This file authenticates the user data from csv file
-============================================================================='''
+============================================================================="""
 
 import re
 import os
@@ -15,12 +15,6 @@ import string
 import csv
 import getpass #to hide characters for password ,Which will get the password while displaying nothing
 
-def database():
-    global data
-    global d,secdata
-    data = [['admin','admin']]  #default creditinals
-    secdata = ['12345']
-    d = []
 
 def menu(): 
     print("")
@@ -118,6 +112,6 @@ def user():
         exit()
     elif choice > 3:
         print("Invalid choice !!!!  Program is terminating ")
-# database()
+
 # menu()
 # user()
